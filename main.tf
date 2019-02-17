@@ -67,7 +67,7 @@ module "eks_node" {
     "${module.subnets.subnets}",
   ]
 }
-
+/* 
 module "sec_group_rds" {
   source         = "./network/sec_group"
   vpc_id         = "${module.vpc.vpc_id}"
@@ -93,4 +93,4 @@ module "rds" {
   db_password       = "${var.db_password}"
   sec_grp_rds       = "${module.sec_group_rds.sec_grp_rds}"
 }
-
+ */

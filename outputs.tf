@@ -65,7 +65,7 @@ output "eks_endpoint" {
 output "eks_cluster_name" {
   value = "${module.eks_cluster.eks_cluster_name}"
 }
-
+/* 
 output "sec_grp_rds" {
   value = "${module.sec_group_rds.sec_grp_rds}"
 }
@@ -122,3 +122,4 @@ output "db_instance_port" {
 value = "${module.rds.db_instance_port}"
 }
 
+ */

@@ -24,7 +24,7 @@ variable "eks_cluster_name" {
   description = "cluster name"
   default     = "terra"
 }
-
+/* 
 variable "identifier" {
   description = "Identifier for DB"
   default     = "terra-db"
@@ -71,3 +71,4 @@ variable "db_username" {
 variable "db_password" {
   description = "password, provide through your tfvars file"
 }
+ */
