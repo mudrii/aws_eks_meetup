@@ -8,7 +8,7 @@ variable "secret_key" {
 
 variable "aws_region" {
   description = "AWS region to launch servers."
-  default     = "us-west-2"
+  default     = "ap-southeast-1"
 }
 
 variable "cidr_block" {
