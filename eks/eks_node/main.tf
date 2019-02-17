@@ -22,7 +22,7 @@ data "template_file" "user_data" {
 
 resource "null_resource" "export_rendered_template" {
 	provisioner "local-exec" {
-	command = "cat > /data_output.sh <<EOL\n${data.template_file.user_data.rendered}\nEOL"
+	command = "cat > ./data_output.sh <<EOL\n${data.template_file.user_data.rendered}\nEOL"
 	}
 }
 
@@ -30,9 +30,9 @@ resource "aws_launch_configuration" "terra" {
   associate_public_ip_address = true
   iam_instance_profile        = "${var.iam_instance_profile}"
   image_id                    = "${data.aws_ami.eks-worker.id}"
-  instance_type               = "m5.large"
+  instance_type               = "t2.medium"
   name_prefix                 = "terraform-eks"
-  key_name                    = "test_access"
+  key_name                    = "my"
   security_groups             = ["${var.security_group_node}"]
 	user_data 									= "${data.template_file.user_data.rendered}"
   lifecycle {

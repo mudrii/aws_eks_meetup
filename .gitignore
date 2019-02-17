@@ -1,6 +1,6 @@
-.idea
 *.tfstate
 *.tfstate.backup
 *.tfvars
 .terraform
 tfplan
+data_output.sh
