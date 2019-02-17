@@ -67,30 +67,3 @@ module "eks_node" {
     "${module.subnets.subnets}",
   ]
 }
-/* 
-module "sec_group_rds" {
-  source         = "./network/sec_group"
-  vpc_id         = "${module.vpc.vpc_id}"
-  vpc_cidr_block = "${module.vpc.vpc_cidr_block}"
-} 
-
-
-module "rds" {
-  source = "./rds"
-
-  subnets = [
-    "${module.subnets.subnets}",
-  ]
-
-  sec_grp_rds       = "${module.sec_group_rds.sec_grp_rds}"
-  identifier        = "${var.identifier}"
-  storage_type      = "${var.storage_type}"
-  allocated_storage = "${var.allocated_storage}"
-  db_engine         = "${var.db_engine}"
-  engine_version    = "${var.engine_version}"
-  instance_class    = "${var.instance_class}"
-  db_username       = "${var.db_username}"
-  db_password       = "${var.db_password}"
-  sec_grp_rds       = "${module.sec_group_rds.sec_grp_rds}"
-}
- */
