@@ -32,7 +32,7 @@ resource "aws_launch_configuration" "terra" {
   image_id                    = "${data.aws_ami.eks-worker.id}"
   instance_type               = "t2.medium"
   name_prefix                 = "terraform-eks"
-  key_name                    = "my"
+  key_name                    = "my_key"
   security_groups             = ["${var.security_group_node}"]
 	user_data 									= "${data.template_file.user_data.rendered}"
   lifecycle {
